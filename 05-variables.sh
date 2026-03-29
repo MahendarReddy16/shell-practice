@@ -1,0 +1,14 @@
+#!/bin/bash
+#username and password giving in git leads mis use of confidential information, So we need to get data during runtime.
+#So we use below to get details during runtime
+echo "Please enter your username::"
+#read --> used to take the input from the user
+read USERNAME
+
+echo "username netered is: $USERNAME"
+
+echo "Please enter your username::"
+# read -s --> Used to hide the input provided we use (-s)
+read -s PASSWORD
+
+echo "username entered is: $PASSWORD"
