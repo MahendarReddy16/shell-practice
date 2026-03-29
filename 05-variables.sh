@@ -7,7 +7,7 @@ read USERNAME
 
 echo "username entered is: $USERNAME"
 
-echo "Please enter your username::"
+echo "Please enter your password::"
 # read -s --> Used to hide the input provided we use (-s)
 read -s PASSWORD
 
