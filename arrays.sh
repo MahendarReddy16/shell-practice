@@ -8,6 +8,8 @@ echo "First fruit is: ${Fruits[0]}"
 echo "Second fruit is: ${Fruits[1]}"
 echo "Third fruit is: ${Fruits[2]}"
 echo "Fourth fruit is: ${Fruits[3]}"
+echo "Fourth fruit is: $Fruits[3]"
 
 # here @ indicates all names in the list
-echo "all fruits is: $Fruits[@]"
+echo "All fruits is: ${Fruits[@]}"
+echo "All fruits is: $Fruits[@]"

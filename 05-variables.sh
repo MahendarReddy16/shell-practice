@@ -5,7 +5,7 @@ echo "Please enter your username::"
 #read --> used to take the input from the user
 read USERNAME
 
-echo "username netered is: $USERNAME"
+echo "username entered is: $USERNAME"
 
 echo "Please enter your username::"
 # read -s --> Used to hide the input provided we use (-s)
