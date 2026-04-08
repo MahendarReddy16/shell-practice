@@ -2,6 +2,8 @@
 PERSON1=Mahi
 PERSON2=Maha
 
+#Conversion using the Shell Script by 
+
 echo "$PERSON1:: Hi ${PERSON2}, how are you?"
 echo "${PERSON2}:: Hi $PERSON1, I'm fine, how are you?"
 echo "$PERSON1:: I'm doing good ${PERSON2}, What's going on?"
