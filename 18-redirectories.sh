@@ -13,7 +13,7 @@ N="\e[0m" #Normal color
 Y="\e[33m" #Yellow color
 
 CHECK_ROOT(){
-    if [$USERID -ne 0 ]
+    if [ $USERID -ne 0 ]
     then
         echo -e "$R Root Priveleges required $N" | tee -a $LOG_FILE
         exit 1
@@ -38,7 +38,7 @@ echo ":Script started execution at: $(date)" | tee -a $LOG_FILE
 
 CHECK_ROOT
 
-if [$# -eq 0]
+if [ $# -eq 0 ]
 then
     USAGE
 fi
@@ -47,7 +47,7 @@ fi
 for package in $@ # $@ refers to all the arguments passed to it
 do 
    dnf list installed $package &>>$LOG_FILE # To check whether package is installed or not
-   if [$? -ne 0]
+   if [ $? -ne 0 ]
    then
        echo "$package is not installed.. intalling it" | tee -a $LOG_FILE
        dnf install $package -y &>>$LOG_FILE #installing here 

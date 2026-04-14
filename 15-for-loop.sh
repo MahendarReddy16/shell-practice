@@ -28,7 +28,7 @@ CHECK_ROOT
 for package in $@ # $@ refers to all the arguments passed to it
 do 
    dnf list installed $package # To check whether package is installed or not
-   if [$? -ne 0]
+   if [ $? -ne 0 ]
    then
        echo " $package is not installed.. intalling it"
        dnf install $package -y #installing here 

@@ -14,7 +14,7 @@ VALIDATE(){
     fi 
 }
 
-if[$USERID -ne 0]
+if [ $USERID -ne 0 ]
 then
     echo "Root Priveleges required"
     exit 1
@@ -22,7 +22,7 @@ fi
 
 dnf list installed git # To check whether git is installed or not
 
-if[$? -ne 0]
+if [ $? -ne 0 ]
 then
     echo " Git is not installed.. intalling it"
     dnf install git -y #installing here 
