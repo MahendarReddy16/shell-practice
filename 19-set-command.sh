@@ -27,5 +27,5 @@ failure(){
 trap 'failure "${LINENO}" "$BASH_COMMAND"' ERR # ERR is the error signal
 
 echo "Hello World success"
-echooooo "Hello Wolrd failure"
+#echooooo "Hello Wolrd failure"
 echo "Hello World after failure"
