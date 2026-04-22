@@ -13,6 +13,5 @@ echo Mahi
 set -ex
 
 echo "Hello World"
-doo
 echo Mahi
 
