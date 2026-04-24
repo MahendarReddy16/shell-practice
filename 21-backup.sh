@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#/bin/ec2-user/app-logs
+#/bin/ec2-user/backup-logs
+
 SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14}
@@ -30,5 +33,5 @@ then
     echo -e "$DIST_DIR $R doesn't exist... $N Please check"
 fi
 
-FILES=$(find ${SOURCE_DIR} -name "*.log" -ntime $DAYS)
+FILES=$(find ${SOURCE_DIR} -name "*.log" -ntime ${DAYS})
 echo "FILES: $FILES"
