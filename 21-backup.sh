@@ -33,5 +33,5 @@ then
     echo -e "$DIST_DIR $R doesn't exist... $N Please check"
 fi
 
-FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime ${DAYS})
-echo "FILES: $FILES"
+#FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime ${DAYS})
+#echo "FILES: $FILES"
