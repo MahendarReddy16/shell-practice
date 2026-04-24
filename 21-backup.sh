@@ -26,6 +26,8 @@ fi
 if [ -d $SOURCE_DIR ]
 then 
     echo -e "$SOURCE_DIR $R doesn't exist... $N Please check"
+else
+   echo "exist"
 fi
 
 if [ -d $DEST_DIR ]
