@@ -16,7 +16,7 @@ else
 fi
 
 FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
-echo "Logs Files grater than 14days: $FILES"
+echo "Logs Files older than 14days: -n $FILES"
 
 #Used to read the output or reading the files
 #IFS(Internal Field Seperator), empty it will ignore while space -r is for to not to ignore special charcters like /
