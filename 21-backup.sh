@@ -41,7 +41,7 @@ FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +$DAYS)
 
 echo "FILES: $FILES"
 
-if [ ! -z $FILES ] #true if FILES is empty, ! makes it expression false
+if [ ! -z "$FILES" ] #true if FILES is empty, ! makes it expression false
 then 
     echo "Files are found"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
@@ -56,7 +56,7 @@ then
         do
            echo "Deleting file: $file"
            rm -rf $file
-        done <<< $FILES
+        done <<< "$FILES"
     else
         echo -e "Zipping files $R FAILED $N"
         exit 1
