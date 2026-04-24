@@ -56,13 +56,6 @@ then
         do
            echo "Deleting file: $file"
            rm -rf $file
-           if [ $? -ne 0 ]
-           then
-               echo -e "$file deletion $R FAILED $N"
-           else
-                echo -e "$file deleted $G SUCCESSFULLY $N"
-                exit 1
-            fi
         done <<< $FILES
     else
         echo -e "Zipping files $R FAILED $N"
