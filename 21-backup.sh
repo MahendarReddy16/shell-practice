@@ -10,6 +10,10 @@ G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
 
+USAGE () {
+    echo -e "$R USAGE: $N sh output.sh <source_path> <dest_path> <days(optional)>"
+}
+
 if [ $# -lt 2 ]
 then 
     USAGE
