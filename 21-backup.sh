@@ -5,7 +5,7 @@
 
 SOURCE_DIR=$1
 DEST_DIR=$2
-DAYS=${3:-14}
+DAYS=${3:+14}
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 
 R="\e[31m"
@@ -37,10 +37,10 @@ then
     exit 1
 fi
 
-FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime ${DAYS})
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime $DAYS)
 echo "FILES: $FILES"
 
-if [ ! -z $FILES ]
+if [ -z $FILES ]
 then 
     echo "Files are found"
     ZIP_FILE="$DEST_DIR/app_logs-$TIMESTAMP.zip"
