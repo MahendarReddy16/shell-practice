@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DISK_USAGE=$(df -hT | grep Xfs)
-DISK_THRESHOLD=
+DISK_THRESHOLD=5
 
 while IFS= read -r line
 do
