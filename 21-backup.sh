@@ -58,16 +58,16 @@ then
            rm -rf $file
            if [ $? -ne 0 ]
            then
-               echo "$file deletion $R FAILED $N"
+               echo -e "$file deletion $R FAILED $N"
            else
-                echo "$file deleted $G SUCCESSFULLY $N"
+                echo -e "$file deleted $G SUCCESSFULLY $N"
                 exit 1
             fi
         done <<< $FILES
     else
-        echo "Zipping files $R FAILED $N"
+        echo -e "Zipping files $R FAILED $N"
         exit 1
     fi    
 else
-    echo "No files found $Y folder than $DAYS $N"
+    echo -e "No files found $Y folder than $DAYS $N"
 fi
