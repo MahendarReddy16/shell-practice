@@ -56,7 +56,7 @@ then
         do
            echo "Deleting file: $file"
            rm -rf $file
-           if [ $? -nq 0 ]
+           if [ $? -ne 0 ]
            then
                echo -e "$file Deletion $R FAILED $N"
                exit 1
