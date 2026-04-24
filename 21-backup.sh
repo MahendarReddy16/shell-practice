@@ -10,6 +10,12 @@ G="\e[32m"
 N="\e[0m"
 Y="\e[33m"
 
+if [ $# -lt 2 ]
+then 
+    USAGE
+    exit 1
+fi
+
 if [ -d $SOURCE_DIR ]
 then 
     echo -e "$SOURCE_DIR $R doesn't exist... $N Please check"
