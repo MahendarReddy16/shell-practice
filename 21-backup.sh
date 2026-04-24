@@ -26,11 +26,13 @@ fi
 if [ ! -d $SOURCE_DIR ]
 then 
     echo -e "$SOURCE_DIR $R doesn't exist... $N Please check"
+    exit 1
 fi
 
 if [ ! -d $DEST_DIR ]
 then 
     echo -e "$DEST_DIR $R doesn't exist... $N Please check"
+    exit 1
 fi
 
 FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime ${DAYS})
