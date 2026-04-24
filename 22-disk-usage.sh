@@ -5,8 +5,8 @@ DISK_THRESHOLD=5
 
 while IFS= read -r line
 do
-USAGE=$(echo $line | grep Xfs | awk -F " " {print $6F} | cut -d "%" -f1)
-PARTITION=$(echo $line | grep Xfs | awk -F " " {print $NF})
+USAGE=$(echo $line | grep Xfs | awk -F " " '{print $6F}' | cut -d "%" -f1)
+PARTITION=$(echo $line | grep Xfs | awk -F " " '{print $NF}')
 
 if [ $USAGE -gt $DISK_THRESHOLD ]
 then 
