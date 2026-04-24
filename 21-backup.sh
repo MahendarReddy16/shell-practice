@@ -17,6 +17,8 @@ USAGE () {
     echo -e "$R USAGE: $N sh output.sh <source_path> <dest_path> <days(optional)>"
 }
 
+set -e
+
 if [ $# -lt 2 ]
 then 
     USAGE
