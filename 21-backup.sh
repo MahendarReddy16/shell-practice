@@ -23,14 +23,12 @@ then
     exit 1
 fi
 
-if [ -d $SOURCE_DIR ]
+if [ ! -d $SOURCE_DIR ]
 then 
     echo -e "$SOURCE_DIR $R doesn't exist... $N Please check"
-else
-   echo "exist"
 fi
 
-if [ -d $DEST_DIR ]
+if [ ! -d $DEST_DIR ]
 then 
     echo -e "$DIST_DIR $R doesn't exist... $N Please check"
 fi
