@@ -35,3 +35,10 @@ fi
 
 FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime ${DAYS})
 echo "FILES: $FILES"
+
+if [ ! -z $FILES ]
+then 
+    echo "Files are found"
+else
+    echo "No files found older than $DAYS"
+fi
