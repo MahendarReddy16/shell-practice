@@ -16,13 +16,13 @@ else
 fi
 
 FILES=$(find ${SOURCE_DIR} -name "*.log" -mtime +14)
-echo "Logs Files older than 14days: -n $FILES"
+echo "Logs Files older than 14days: $FILES"
 
 #Used to read the output or reading the files
 #IFS(Internal Field Seperator), empty it will ignore while space -r is for to not to ignore special charcters like /
 
 while IFS= read -r line
 do 
-   echo "deleting old logs"
+   echo "deleting old logs $FILES"
    rm -rf  $line
 done <<< $FILES
