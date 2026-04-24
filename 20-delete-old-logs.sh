@@ -23,6 +23,6 @@ echo "Logs Files older than 14days: $FILES"
 
 while IFS= read -r line
 do 
-   echo "deleting old logs $FILES"
+   echo "deleting old logs"
    rm -rf  $line
 done <<< $FILES
